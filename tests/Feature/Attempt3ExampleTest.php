@@ -12,7 +12,7 @@ class Attempt3ExampleTest extends TestCase
         $this->postJson(route('example'), [])
             ->assertStatus(422)
             ->assertJsonValidationErrors([
-                'userId' => 'The customer id field is required.',
+                'userId' => 'The user id field is required.',
                 'description' => 'The description field is required.',
             ]);
     }
@@ -37,7 +37,7 @@ class Attempt3ExampleTest extends TestCase
         ])
             ->assertStatus(422)
             ->assertJsonValidationErrors([
-                'userId' => 'The customer id must be an integer.',
+                'userId' => 'The user id must be an integer.',
                 'description' => 'The description must be a string.',
             ]);
     }
@@ -50,7 +50,7 @@ class Attempt3ExampleTest extends TestCase
         ])
             ->assertStatus(422)
             ->assertJsonValidationErrors([
-                'userId' => 'The customer id must be 6 digits.',
+                'userId' => 'The user id must be 6 digits.',
             ]);
     }
 
@@ -62,7 +62,7 @@ class Attempt3ExampleTest extends TestCase
         ])
             ->assertStatus(422)
             ->assertJsonValidationErrors([
-                'userId' => 'The customer id must be 6 digits.',
+                'userId' => 'The user id must be 6 digits.',
             ]);
     }
 
@@ -74,7 +74,7 @@ class Attempt3ExampleTest extends TestCase
         ])
             ->assertStatus(422)
             ->assertJsonValidationErrors([
-                'userId' => 'The description may not be greater than 20 characters.',
+                'description' => 'The description must not be greater than 20 characters.',
             ]);
     }
 }

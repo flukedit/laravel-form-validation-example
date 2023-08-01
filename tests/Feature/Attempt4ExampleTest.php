@@ -25,7 +25,7 @@ class Attempt4ExampleTest extends TestCase
             [
                 [],
                 [
-                    'userId' => 'The customer id field is required.',
+                    'userId' => 'The user id field is required.',
                     'description' => 'The description field is required.',
                 ]
             ],
@@ -35,21 +35,21 @@ class Attempt4ExampleTest extends TestCase
                     'description' => ['array'],
                 ],
                 [
-                    'userId' => 'The customer id must be an integer.',
+                    'userId' => 'The user id must be an integer.',
                     'description' => 'The description must be a string.',
                 ]
             ],
             [
                 ['userId' => 55555],
-                ['userId' => 'The customer id must be 6 digits.']
+                ['userId' => 'The user id must be 6 digits.']
             ],
             [
                 ['userId' => 7777777],
-                ['userId' => 'The customer id must be 6 digits.'],
+                ['userId' => 'The user id must be 6 digits.'],
             ],
             [
                 ['description' => 'string-more-than-20-chars'],
-                ['description' => 'The description may not be greater than 20 characters.']
+                ['description' => 'The description must not be greater than 20 characters.']
             ]
         ];
     }
